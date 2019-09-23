@@ -12,7 +12,9 @@ class AuthComponent extends Component{
   state = {
     loading :false
   }
-
+  goNext = () => {
+    this.props.navigation.navigate('App')
+  }
   render(){
     if (this.state.loading) {
       return (
@@ -24,7 +26,9 @@ class AuthComponent extends Component{
       return (
         <View style={styles.container}>
            <LogoComponent/>
-           <FormComponent/>
+           <FormComponent
+              goNext = {this.goNext}
+           />
         </View>
        
       )
@@ -33,14 +37,12 @@ class AuthComponent extends Component{
 }
 const styles = StyleSheet.create({
   container : {
-    flex : 1,
+    flex:1,
     backgroundColor:'#1d428a',
+    
+    
   },
   loading : {
-    flex : 1,
-    alignItems:'center',
-    justifyContent:'center',
-   
   }
 })
 export default AuthComponent;

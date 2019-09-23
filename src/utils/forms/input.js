@@ -20,16 +20,13 @@ const input = ( props ) => {
 }
 const styles = StyleSheet.create({
     input : {
-        width : '100%',
         borderBottomColor:'#eaeaea',
         borderBottomWidth:1,
         fontSize:16,
         fontWeight:'bold',
         padding:10,
         marginTop:10,
-        paddingLeft: 15,
-        paddingRight: 15
-     
+      
     }
 })
 export default input;
